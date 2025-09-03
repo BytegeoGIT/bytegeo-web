@@ -1,0 +1,193 @@
+---
+layout: page
+title: "Qué hacemos"
+description: "Descubre en qué trabajamos y cómo podemos ayudarte"
+video: '/videos/maps1.mp4'
+permalink: /que-hacemos/
+---
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto text-center">
+      <h2 class="mb-4">Cómo podemos ayudarte</h2>
+      <p class="lead">
+        En <strong>Bytegeo</strong>, transformamos los <strong>datos geoespaciales</strong> en <em>soluciones prácticas</em> para tu negocio. 
+        Combinamos <strong>consultoría GIS</strong>, desarrollo de <em>herramientas a medida</em>, <strong>análisis avanzado</strong> y gestión eficiente de 
+        información geoespacial, junto con <strong>visualización de modelos</strong> y tecnologías innovadoras como <em>Geo AI</em>.
+      </p>
+      <p>
+        Nuestro enfoque integral te permite <strong>digitalizar tus procesos</strong>, obtener <em>conocimiento accionable</em> y 
+        <strong>visualizar tu territorio</strong> de manera clara y estratégica.
+      </p>
+      <p>
+        ¿Tienes un <strong>reto geoespacial</strong> o necesitas integrar la localización en tus sistemas? 
+        <strong>Estamos listos para ayudarte.</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- Tarjetas de servicios -->
+  <div class="row g-4 mt-5">
+    <!-- 1 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <a href="{{ '/consultoria-gis' | relative_url }}" class="text-decoration-none">
+        <div class="service-card h-100 text-center p-4">
+          <i class="fa fa-lightbulb service-icon"></i>
+          <h5 class="mt-3">Consultoría GIS</h5>
+          <p class="text-muted small">Tecnología geoespacial al servicio de tu transformación digital.</p>
+        </div>
+      </a>
+    </div>
+    <!-- 2 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <a href="{{ '/desarrollo' | relative_url }}" class="text-decoration-none">
+        <div class="service-card h-100 text-center p-4">
+          <i class="fa fa-map service-icon"></i>
+          <h5 class="mt-3">Soluciones GIS</h5>
+          <p class="text-muted small">Desarrollamos herramientas GIS a medida para tu negocio.</p>
+        </div>
+      </a>
+    </div>
+    <!-- 3 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <a href="{{ '/analisis-geo-ai' | relative_url }}" class="text-decoration-none">
+        <div class="service-card h-100 text-center p-4">
+          <i class="fa fa-brain service-icon"></i>
+          <h5 class="mt-3">Análisis & Geo AI</h5>
+          <p class="text-muted small">Transformamos datos geoespaciales en conocimiento accionable.</p>
+        </div>
+      </a>
+    </div>
+    <!-- 4 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <a href="{{ '/gestion-datos' | relative_url }}" class="text-decoration-none">
+        <div class="service-card h-100 text-center p-4">
+          <i class="fa fa-database service-icon"></i>
+          <h5 class="mt-3">Gestión de Datos</h5>
+          <p class="text-muted small">Datos organizados, accesibles y siempre listos para usar.</p>
+        </div>
+      </a>
+    </div>
+    <!-- 5 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <a href="{{ '/modelos-visualizacion' | relative_url }}" class="text-decoration-none">
+        <div class="service-card h-100 text-center p-4">
+          <i class="fa fa-globe service-icon"></i>
+          <h5 class="mt-3">Visualización Espacial</h5>
+          <p class="text-muted small">Mapas interactivos y gemelos digitales para tu territorio.</p>
+        </div>
+      </a>
+    </div>
+    <!-- 6 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <a href="{{ '/innovacion-tecnologia' | relative_url }}" class="text-decoration-none">
+        <div class="service-card h-100 text-center p-4">
+          <i class="fa fa-rocket service-icon"></i>
+          <h5 class="mt-3">Innovación & Tecnología</h5>
+          <p class="text-muted small">Geo AI y tecnología avanzada al servicio del GIS.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Tarjetas modernas */
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  transition: all .3s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+}
+.service-icon {
+  font-size: 2rem;
+  color: #007bff;
+  transition: color .3s ease;
+}
+.service-card:hover .service-icon {
+  color: #0056b3;
+}
+
+/* Asegurar que el enlace cubre toda la tarjeta */
+a.text-decoration-none {
+  color: inherit;
+}
+a.text-decoration-none:hover {
+  text-decoration: none;
+}
+</style>
+
+<!-- Sección de contacto -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">¿Tienes un reto geoespacial o quieres más información? Contáctanos</h3>
+    <p class="text-center text-muted mb-5">Rellena el formulario y nos pondremos en contacto contigo cuanto antes.</p>
+
+    <form id="contactform" name="sentMessage" action="https://formspree.io/f/xbjpyeap" method="POST">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="name" class="form-control" placeholder="Nombre" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input type="tel" name="phone" class="form-control" placeholder="Número de Teléfono" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-3">
+        <label>Mensaje</label>
+        <textarea rows="5" name="message" class="form-control" placeholder="Mensaje" required></textarea>
+      </div>
+
+      <div class="text-center mt-4">
+        <input type="submit" class="btn btn-primary" value="Enviar">
+      </div>
+    </form>
+
+    <!-- Mensaje de éxito -->
+    <div id="form-message" style="display:none; margin-top:1rem; color:green; font-weight:bold; text-align:center;">
+      ✅ ¡Gracias! Hemos recibido tu mensaje.
+    </div>
+  </div>
+</section>
+
+<!-- Script AJAX para envío sin recargar la página -->
+<script>
+document.getElementById("contactform").addEventListener("submit", async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.style.display = "none";
+      document.getElementById("form-message").style.display = "block";
+    } else {
+      alert("❌ Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.");
+    }
+  } catch (error) {
+    alert("❌ Error de conexión. Intenta más tarde.");
+  }
+});
+</script>

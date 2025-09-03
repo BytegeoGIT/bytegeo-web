@@ -1,0 +1,112 @@
+<!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          {% if site.email %}
+          <li class="list-inline-item">
+            <a href="mailto:{{ site.email | encode_email }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li class="list-inline-item">
+            <a href="https://twitter.com/{{ site.twitter_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.facebook_username %}
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/{{ site.facebook_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.linkedin_username %}
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.github_username %}
+          <li class="list-inline-item">
+            <a href="https://github.com/{{ site.github_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+        <p class="copyright text-muted">{{ site.author }} {{ 'now' | date: "%Y" }}</p>
+      </div>
+    </div>
+  </div>
+  <!-- Texto legal -->
+<p class="footer-legal">
+  <a href="/Legal/privacy.html">Política de Privacidad</a> |
+  <a href="/Legal/cookies.html">Política de Cookies</a> |
+  <a href="/Legal/legal.html">Aviso Legal</a>
+</p>
+<footer>
+  &copy; 2025 Bytegeo
+</footer>
+
+<!-- Inicialización del banner CookieConsent -->
+<script>
+window.addEventListener("load", function() {
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": { "background": "#000" },
+      "button": { "background": "#f1d600" }
+    },
+    "theme": "classic",
+    "type": "opt-in",
+    "content": {
+      "message": "Este sitio web utiliza cookies para mejorar su experiencia.",
+      "dismiss": "Aceptar todas",
+      "allow": "Aceptar todas",
+      "deny": "Rechazar todas",
+      "link": "Más información",
+      "href": "/Legal/cookies.html"
+    },
+    onInitialise: function(status) {
+      if (this.hasConsented()) {
+        // Inicializar cookies de terceros o Analytics aquí
+        console.log("Usuario ha aceptado cookies");
+      } else {
+        console.log("Usuario no ha aceptado cookies");
+      }
+    },
+    onStatusChange: function(status) {
+      if (this.hasConsented()) {
+        console.log("Usuario aceptó cookies tras cambio de estado");
+      } else {
+        console.log("Usuario rechazó cookies tras cambio de estado");
+      }
+    }
+  });
+});
+</script>
+
+</footer>

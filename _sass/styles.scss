@@ -1,0 +1,19 @@
+// Import Core Clean Blog SCSS
+@import "../assets/vendor/startbootstrap-clean-blog/scss/clean-blog.scss";
+.submenu-list {
+  margin: 0;
+  padding-left: !important 0;
+  list-style-type: none !important; /* quitamos números/puntos */
+}
+.submenu-list li {
+  margin-bottom: !important 5px;
+}
+/* Ítems del dropdown */
+.dropdown-item {
+  padding-left: 4px !important; /* reduce el padding interno */
+  padding-right: 8px; /* opcional, mantiene separación derecha */
+}
+.dropdown-item i {
+  margin-right: 6px !important; /* separación entre icono y texto */
+  color: #007bff; /* azul corporativo, puedes cambiarlo */
+}

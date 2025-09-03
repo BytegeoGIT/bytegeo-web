@@ -1,0 +1,261 @@
+---
+layout: page
+title: Clientes
+permalink: /clientes/
+description: Algunos de los clientes que confían en nosotros.
+background: '/img/clientes3.jpg'
+---
+
+<section class="py-5">
+  <div class="container">
+
+    <header class="mb-4 text-center">
+      <h1 class="h2 mb-2">Clientes</h1>
+      <p class="text-muted mb-0">Organizaciones que confían en nuestras soluciones GIS y geointeligencia.</p>
+    </header>
+
+    <div class="row g-3 g-md-4">
+
+      <!-- 1 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo"
+               src="/img/LogosClientes/dornier.jpg"
+               alt="Dornier"
+               loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/ambiwaste-logo.png" alt="Ambiwaste" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/andaira.png" alt="Andaira" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/bigmat-rrss-share.jpg" alt="BigMat" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/joal.png" alt="Joal" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/greenpeace.webp" alt="Greenpeace" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 7 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/somacyl.jpg" alt="Somacyl" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 8 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/Repapubli.png" alt="Repapubli" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 9 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/KMW.png" alt="KMW" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 10 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/INCA.png" alt="INCA Medio" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 11 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/Aplica.png" alt="Aplicacoop" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 12 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/empark.png" alt="EMPARK" loading="lazy">
+        </figure>
+      </div>
+
+      <!-- 13 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <figure class="client-card">
+          <img class="client-logo" src="/img/LogosClientes/arquetipos.png" alt="Arquetipos" loading="lazy">
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.client-card {
+  margin: 0;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.client-logo {
+  max-width: 100%;
+  height: 90px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: .85;
+  transition: filter .3s ease, opacity .3s ease, transform .3s ease;
+}
+
+/* Logo activo (en color) */
+.client-logo.active {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Hover: logo en color */
+.client-card:hover .client-logo {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const logos = document.querySelectorAll(".client-logo");
+  let activeIndex = 0;
+  let interval;
+
+  function setActive(index) {
+    logos.forEach(logo => logo.classList.remove("active"));
+    logos[index].classList.add("active");
+    activeIndex = index;
+  }
+
+  function startRotation() {
+    interval = setInterval(() => {
+      let nextIndex = (activeIndex + 1) % logos.length;
+      setActive(nextIndex);
+    }, 2000); // cada 3 segundos
+  }
+
+  function stopRotation() {
+    clearInterval(interval);
+  }
+
+  // Inicializar
+  setActive(0);
+  startRotation();
+
+  // Hover sobre logos
+  logos.forEach((logo, i) => {
+    logo.addEventListener("mouseenter", () => {
+      stopRotation();
+      setActive(i);
+    });
+    logo.addEventListener("mouseleave", () => {
+      startRotation();
+    });
+  });
+});
+</script>
+<!-- Sección de contacto -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">¿Tienes un reto geoespacial o quieres más información? Contáctanos</h3>
+    <p class="text-center text-muted mb-5">Rellena el formulario y nos pondremos en contacto contigo cuanto antes.</p>
+
+    <form id="contactform" name="sentMessage" action="https://formspree.io/f/xbjpyeap" method="POST">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="name" class="form-control" placeholder="Nombre" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input type="tel" name="phone" class="form-control" placeholder="Número de Teléfono" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-3">
+        <label>Mensaje</label>
+        <textarea rows="5" name="message" class="form-control" placeholder="Mensaje" required></textarea>
+      </div>
+
+      <div class="text-center mt-4">
+        <input type="submit" class="btn btn-primary" value="Enviar">
+      </div>
+    </form>
+
+    <!-- Mensaje de éxito -->
+    <div id="form-message" style="display:none; margin-top:1rem; color:green; font-weight:bold; text-align:center;">
+      ✅ ¡Gracias! Hemos recibido tu mensaje.
+    </div>
+  </div>
+</section>
+
+<!-- Script AJAX para envío sin recargar la página -->
+<script>
+document.getElementById("contactform").addEventListener("submit", async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.style.display = "none";
+      document.getElementById("form-message").style.display = "block";
+    } else {
+      alert("❌ Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.");
+    }
+  } catch (error) {
+    alert("❌ Error de conexión. Intenta más tarde.");
+  }
+});
+</script>

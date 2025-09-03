@@ -1,0 +1,137 @@
+header.masthead .page-heading,
+  header.masthead .post-heading,
+  header.masthead .site-heading {
+    padding: 150px 0 150px;
+    color: white; }
+    @media only screen and (min-width: 768px) {
+      header.masthead .page-heading,
+      header.masthead .post-heading,
+      header.masthead .site-heading {
+        padding: 150px 0; } }
+  header.masthead .page-heading,
+  header.masthead .site-heading {
+    text-align: center; }
+    header.masthead .page-heading h1,
+    header.masthead .site-heading h1 {
+      font-size: 50px;
+      margin-top: 0; }
+    header.masthead .page-heading .subheading,
+    header.masthead .site-heading .subheading {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.1;
+      display: block;
+      margin: 10px 0 0;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+
+      header.masthead {
+  position: relative;
+  height: 50vh;
+  min-height: 250px;
+  overflow: hidden;
+}
+
+/* contenedor para que el vídeo ocupe todo */
+header.masthead .video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+header.masthead .video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* overlay para oscurecer el vídeo */
+header.masthead .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* contenido de texto por encima */
+header.masthead .container,
+header.masthead .page-heading,
+header.masthead .post-heading {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+/* --- Bloque anterior cerrado --- */
+
+.footer-legal {
+  font-size: 0.8rem;
+  color: #495057;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.footer-legal a {
+  color: #495057;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #212529;
+  text-decoration: underline;
+}
+
+.legal-page {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.legal-page h1 {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #212529;
+}
+
+.legal-page p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.legal-page strong {
+  color: #495057;
+}
+
+.legal-page .button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #495057;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.legal-page .button:hover {
+  background-color: #212529;
+  text-decoration: none;
+}

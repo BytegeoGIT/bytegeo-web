@@ -1,0 +1,114 @@
+---
+layout: page 
+title: Somos Bytegeo
+description: Apasionados por la tecnología GIS y la innovación
+background: '/img/banner3-e1456692770923.jpg'
+---
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <h2 class="mb-4">Quiénes somos</h2>
+      
+      <p>
+        En <strong>Bytegeo</strong>, contamos con <strong>más de 20 años de experiencia</strong> en el ámbito de los 
+        <em>Sistemas de Información Geográfica (GIS)</em>, con un conocimiento especializado en 
+        <strong>tecnología ESRI</strong> y todo el <em>ecosistema ArcGIS</em>.
+      </p>
+
+      <p>
+        Nuestra trayectoria nos permite <strong>escuchar, analizar y resolver</strong> las necesidades reales de cada cliente, 
+        ofreciendo <strong>soluciones ágiles</strong>, <em>innovadoras</em> y bien integradas, 
+        siempre adaptadas a cada sector y caso de uso.
+      </p>
+
+      <p>
+        Gracias a la experiencia del equipo en <strong>GIS</strong> y en <em>tecnología avanzada</em>, 
+        te ayudamos a incorporar la <strong>localización</strong> como una <em>herramienta estratégica de decisión</em>, 
+        de forma sencilla, efectiva y ajustada a tu entorno.
+      </p>
+
+      <p>
+        Nos apasiona la <strong>geolocalización</strong>, la <em>inteligencia espacial</em> y el desarrollo de soluciones 
+        que generan <strong>impacto real</strong>. Combinamos conocimiento técnico con una alta capacidad de innovación, 
+        manteniéndonos siempre <em>cerca del cliente</em>, pero con la seriedad y responsabilidad que exige cada proyecto.
+      </p>
+
+      <p class="mt-4">
+        👉 ¿Tienes un <strong>reto geoespacial</strong> o necesitas <em>integrar la localización</em> en tus sistemas?  
+        <strong>Contáctanos</strong>. Estamos listos para ayudarte a <strong>transformar tus datos en decisiones</strong>.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Sección de contacto -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">¿Tienes un reto geoespacial o quieres más información? Contáctanos</h3>
+    <p class="text-center text-muted mb-5">Rellena el formulario y nos pondremos en contacto contigo cuanto antes.</p>
+
+    <form id="contactform" name="sentMessage" action="https://formspree.io/f/xbjpyeap" method="POST">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="name" class="form-control" placeholder="Nombre" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input type="tel" name="phone" class="form-control" placeholder="Número de Teléfono" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-3">
+        <label>Mensaje</label>
+        <textarea rows="5" name="message" class="form-control" placeholder="Mensaje" required></textarea>
+      </div>
+
+      <div class="text-center mt-4">
+        <input type="submit" class="btn btn-primary" value="Enviar">
+      </div>
+    </form>
+
+    <!-- Mensaje de éxito -->
+    <div id="form-message" style="display:none; margin-top:1rem; color:green; font-weight:bold; text-align:center;">
+      ✅ ¡Gracias! Hemos recibido tu mensaje.
+    </div>
+  </div>
+</section>
+
+<!-- Script AJAX para envío sin recargar la página -->
+<script>
+document.getElementById("contactform").addEventListener("submit", async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.style.display = "none";
+      document.getElementById("form-message").style.display = "block";
+    } else {
+      alert("❌ Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.");
+    }
+  } catch (error) {
+    alert("❌ Error de conexión. Intenta más tarde.");
+  }
+});
+</script>
+
