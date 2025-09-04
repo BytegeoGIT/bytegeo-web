@@ -2,7 +2,7 @@ title:              Bytegeo
 email:              support@bytegeo.com
 description:        Innovación en Tecnología Geoespacial.
 author:             Bytegeo
-baseurl:            ""
+baseurl:            "/bytegeo-web"
 url:                "https://BytegeoGIT.github.io/bytegeo-web"
 
 # Social Profiles
