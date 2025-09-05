@@ -135,3 +135,34 @@ header.masthead .post-heading {
   background-color: #212529;
   text-decoration: none;
 }
+
+/* Tamaño y comportamiento responsivo del dropdown */
+.dropdown-menu {
+  width: 360px;
+  max-width: 90vw; /* no desborde en móviles */
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
+/* Alinea iconos */
+.dropdown-item i {
+  width: 1.2em;
+  display: inline-block;
+}
+
+/* En pantallas pequeñas: hacemos que el dropdown sea estático dentro del menú colapsado */
+@media (max-width: 991.98px) {
+  .navbar-nav .dropdown-menu {
+    position: static;   /* ya no es absolute */
+    float: none;
+    display: none;      /* se muestra solo cuando .dropdown tiene la clase .show */
+    width: 100%;
+    padding: 0.25rem 0;
+  }
+  .navbar-nav .dropdown.show .dropdown-menu {
+    display: block;
+  }
+  .dropdown-item {
+    padding: .75rem 1.25rem;
+  }
+}
